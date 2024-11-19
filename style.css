@@ -1,0 +1,521 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  --main-font: "Edu AU VIC WA NT Pre", cursive;
+  --secondary-font: "Open Sans", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+i {
+  margin-right: 1rem;
+  color: beige;
+}
+
+img {
+  display: block;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+    to top,
+    rgb(145, 84, 48),
+    rgb(213, 119, 41),
+    beige
+  );
+  animation: background 10s ease infinite;
+}
+
+header {
+  background-color: rgb(145, 84, 48);
+}
+li {
+  list-style: none;
+}
+
+.nav-menu .nav-item:has(:hover) {
+  background-color: rgb(213, 119, 41);
+  transition: 1s ease-in;
+  transform: scaleX(1.2);
+  padding: 10px;
+  border-radius: 12px;
+}
+
+ul li:has(:focus) {
+  background-color: rgb(213, 119, 41);
+  transition: 1s ease;
+  transform: rotate(360deg);
+  padding: 10px;
+  border-radius: 12px;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--main-font);
+  color: aliceblue;
+}
+
+/*  Nav*/
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 24px;
+}
+
+/* ul */
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+  color: rgb(220, 178, 95);
+  font-size: 1.4rem;
+}
+
+.nav-link:hover {
+  color: aliceblue;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Seamus Animation */
+
+.seamus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.seamus span {
+  font-family: var(--main-font);
+  font-size: 6rem;
+  color: dodgerblue;
+  animation: seamus 10s ease infinite;
+}
+
+/* Top Section - Logo */
+
+.h1 {
+  background-color: rgb(145, 84, 48);
+  margin: 3rem 0;
+  width: 100%;
+}
+
+h1 {
+  font-size: clamp(1rem, 5vw, 5rem);
+  color: beige;
+  text-align: center;
+  font-family: var(--main-font);
+  padding: 3rem 0;
+  filter: drop-shadow(5px 2px 0px rgb(213, 119, 41));
+  z-index: 1;
+}
+
+.logo_wrapper {
+  background-color: rgb(145, 84, 48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 0;
+  margin: 30% 0 50% 0;
+  border-radius: 50%;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: brown;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 10px solid rgb(226, 159, 82);
+}
+
+.my-logo {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+/*  About Me */
+.about_me {
+  margin: 3rem 0;
+}
+
+.about_me h2 {
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  background-color: rgb(145, 84, 48);
+  color: beige;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+figure > img {
+  width: 80%;
+  height: auto;
+  margin: 1rem auto;
+}
+
+figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 1rem auto;
+  background-color: rgb(145, 84, 48);
+  width: 80%;
+  height: 2rem;
+  color: beige;
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.hero_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.hero_wrapper img {
+  width: 80%;
+  height: 80%;
+  aspect-ratio: 1/1;
+  margin-bottom: 100px;
+  border-radius: 20px 30px 20px 30px;
+  border: 10px solid rgb(213, 119, 41);
+}
+
+.about_me p {
+  font-size: clamp(16px, 2vw, 3rem);
+  columns: 2;
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.3;
+  font-family: var(--secondary-font);
+}
+
+/* Gallery */
+
+/* styles.css */
+.carousel {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Footer */
+
+.footer_wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(145, 84, 48);
+  height: 10rem;
+  margin: 0 auto;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.home_footer {
+  display: none;
+}
+
+.links a {
+  font-size: clamp(8px, 1.5vw, 2rem);
+  color: beige;
+  text-align: center;
+}
+.links a:hover {
+  transition: 2s ease-in;
+  color: rgb(145, 84, 48);
+}
+
+.links li {
+  line-height: 1.6;
+}
+
+.links li:hover {
+  background-color: rgb(255, 170, 0);
+  border-radius: 10px;
+  font-weight: 900;
+  transition: 2s ease-in-out;
+  width: 100%;
+  padding: 0 1.3rem;
+}
+
+/* newslewtter */
+
+.news_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.news_container label {
+  color: red;
+  font-weight: 900;
+  font-family: var(--main-font);
+  font-size: 1.2rem;
+}
+
+input {
+  flex-shrink: 2;
+}
+
+/* gallery page */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .gallery_main {
+  display: flex;
+} */
+
+.gallery_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid dodgerblue;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  border: 5px solid #e88a26;
+  border-radius: 8px;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 1;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(192, 89, 45, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+button:hover {
+  background-color: rgba(177, 168, 168, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: beige;
+    width: 50%;
+    text-align: center;
+    transition: 0.7s;
+    z-index: 1;
+  }
+
+  .nav-menu li {
+    background-color: rgb(206, 114, 52);
+    transition: all 1s ease;
+    width: 100%;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 50%;
+  }
+
+  .news_container {
+    display: none;
+  }
+
+  .footer_wrapper {
+    width: 90%;
+  }
+
+  .h1 {
+    margin-top: 100px;
+  }
+}
+@keyframes background {
+  100% {
+    background-image: linear-gradient(
+      to top,
+      rgb(145, 84, 48),
+      rgb(213, 119, 41),
+      beige
+    );
+  }
+
+  60% {
+    background-image: linear-gradient(
+      to top,
+      rgb(145, 84, 48),
+      rgb(213, 119, 41),
+      beige
+    );
+  }
+
+  50% {
+    background-image: linear-gradient(
+      to bottom,
+      rgb(145, 84, 48),
+      beige,
+      rgb(213, 119, 41)
+    );
+  }
+
+  0% {
+    background-image: linear-gradient(
+      to bottom,
+      rgb(145, 84, 48),
+      beige,
+      rgb(213, 119, 41)
+    );
+  }
+}
+
+@keyframes seamus {
+  100% {
+    color: rgb(145, 84, 48);
+  }
+
+  50% {
+    color: beige;
+  }
+
+  30% {
+    color: beige;
+  }
+
+  0% {
+    color: rgb(213, 119, 41);
+  }
+}
